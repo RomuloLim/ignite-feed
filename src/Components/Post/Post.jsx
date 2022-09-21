@@ -1,7 +1,7 @@
 import { Avatar } from '../Avatar/Avatar';
 import styles from './Post.module.css'
 
-export function Post(props) {
+export function Post() {
     return (
         <article className={styles.post}>
             <header>
@@ -28,6 +28,18 @@ export function Post(props) {
                     <a href="#">#rocketseat</a>
                 </p>
             </div>
+
+            <form className={styles.commentForm}>
+                <strong>Deixe seu feedback</strong>
+
+                <textarea placeholder='Deixe aqui seu comentário' />
+                
+                <footer>
+                    <button type='submit'>
+                        Publicar
+                    </button>
+                </footer>
+            </form>
         </article>
     );
 }
